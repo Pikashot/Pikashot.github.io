@@ -1,20 +1,22 @@
 
 const POINTS_ODJ = [
-    "point numero 1",
-    "point numero 2",
-    "point numero 3",
-    "point numero 4",
-    "point numero 4",
-    "point numero 4",
-    "point numero 4",
-    "point numero 4",
+    "Couverture BePrepared",
+    "Petites informations diverses",
+    "Les ICares",
+    "DALA : Danse Avec Les Assos",
+    "Teaser Voyage Amsterdam BDE",
+    "Teaser WEPN",
+    "Teaser Apartés",
+    "Prochain Direct Télévisé ! :D",
 ]
 
 const BLAGUES = [
-    "blague 1",
-    "blague 2",
-    "blague 3",
-    "blague 4",
+    "Rondou'Doom est une personne incroyable",
+    "Venez le 10 novembre",
+    "Avec quoi est-ce qu'on ramasse les papayes ? Avec une foufourche !",
+    "Orlysal est un dieu, juste parfois il parle de caca",
+    "C'est un pingouin qui respire par les fesses, il s'assoit et il meurt",
+    "Pourquoi les tyranosaures ne peuvent pas applaudir avec leurs pattes ? Parce qu'ils sont morts",
 ]
 
 let left = 18
