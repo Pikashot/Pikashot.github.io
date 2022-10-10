@@ -59,7 +59,7 @@ function drop(ev) {
         ev.target.style.border = '3px solid lightgreen'
         ev.target.style.borderRadius = '15px'
         setTimeout(donnerPoint, 200)
-    } else {
+    } else if (ev.target.id !== '') {
         ev.target.style.border = '3px solid red'
         ev.target.style.borderRadius = '15px'
     }
