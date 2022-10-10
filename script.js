@@ -40,6 +40,7 @@ function drop(ev) {
 
     element.parentElement.style.border = '1px solid black'
     element.parentElement.style.borderRadius = '0px'
+    element.parentElement.ondragover = allowDrop
 
     if (element.parentElement.children[0].style.display === 'none') {
         element.parentElement.children[0].style.display = 'block'
@@ -50,6 +51,7 @@ function drop(ev) {
     }
 
     ev.target.appendChild(element);
+    ev.target.ondragover = undefined
 
     if (ev.target.id === data + '-container') {
         element.draggable = false
