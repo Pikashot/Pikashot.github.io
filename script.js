@@ -4,6 +4,10 @@ const POINTS_ODJ = [
     "point numero 2",
     "point numero 3",
     "point numero 4",
+    "point numero 4",
+    "point numero 4",
+    "point numero 4",
+    "point numero 4",
 ]
 
 const BLAGUES = [
@@ -13,14 +17,22 @@ const BLAGUES = [
     "blague 4",
 ]
 
+let left = 18
+let isGivingPoints = false
+
 const donnerPoint = () => {
-    if (Math.random() > 0.8 || POINTS_ODJ.length === 0) {
-        alert(BLAGUES[Math.floor(Math.random()*BLAGUES.length)])
-    } else {
-        const index = Math.floor(Math.random()*POINTS_ODJ.length)
-        const point = POINTS_ODJ[index]
-        POINTS_ODJ.splice(index)
+    left -= 1
+
+    if (left < POINTS_ODJ.length) {
+        isGivingPoints = true
+    }
+
+    if (isGivingPoints) {
+        const point = POINTS_ODJ[0]
+        POINTS_ODJ.splice(0,1)
         alert(point)
+    } else {
+        alert(BLAGUES[Math.floor(Math.random()*BLAGUES.length)])
     }
 }
 
