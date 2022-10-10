@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        #div1,
+        #div2 {
+            float: left;
+            width: 50%;
+            height: 80%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Drag and Drop</h2>
+    <p>Drag the image back and forth between the two div elements.</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/Tracto.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/moi.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/AdB.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/Artichou.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/Etagerbe.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/LaMereKurochrome.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88"
+            height="31">
+        <img src="images/Floush.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/GuyChloraine.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/Linkiwi.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/MajorDoom.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/Sazerac.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/RondouDoom.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        <img src="images/Pandoria.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">Nikolaï Tractosex</div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">Pikashot</div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+</body>
+
+</html>
