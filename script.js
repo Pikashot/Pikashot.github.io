@@ -38,6 +38,9 @@ function drop(ev) {
 
     const element = document.getElementById(data)
 
+    element.parentElement.style.border = '1px solid black'
+    element.parentElement.style.borderRadius = '0px'
+
     ev.target.appendChild(element);
 
     if (ev.target.id === data + '-container') {
@@ -46,5 +49,8 @@ function drop(ev) {
         ev.target.style.border = '3px solid lightgreen'
         ev.target.style.borderRadius = '15px'
         setTimeout(donnerPoint, 200)
+    } else {
+        ev.target.style.border = '3px solid red'
+        ev.target.style.borderRadius = '15px'
     }
 }
