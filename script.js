@@ -41,6 +41,14 @@ function drop(ev) {
     element.parentElement.style.border = '1px solid black'
     element.parentElement.style.borderRadius = '0px'
 
+    if (element.parentElement.children[0].style.display === 'none') {
+        element.parentElement.children[0].style.display = 'block'
+    }
+
+    if (ev.target.children[0]) {
+        ev.target.children[0].style.display = 'none';
+    }
+
     ev.target.appendChild(element);
 
     if (ev.target.id === data + '-container') {
