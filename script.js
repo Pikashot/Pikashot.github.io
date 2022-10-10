@@ -46,21 +46,28 @@ function drop(ev) {
         element.parentElement.children[0].style.display = 'block'
     }
 
-    if (ev.target.children[0]) {
-        ev.target.children[0].style.display = 'none';
+    let target
+    if (ev.target.tagName === 'H4') {
+        target = ev.target.parentElement
+    } else {
+        target = ev.target
     }
 
-    ev.target.appendChild(element);
-    ev.target.ondragover = undefined
+    if (target.children[0]) {
+        target.children[0].style.display = 'none';
+    }
 
-    if (ev.target.id === data + '-container') {
+    target.appendChild(element);
+    target.ondragover = undefined
+
+    if (target.id === data + '-container') {
         element.draggable = false
         element.onmouseenter = () => {}
-        ev.target.style.border = '3px solid lightgreen'
-        ev.target.style.borderRadius = '15px'
+        target.style.border = '3px solid lightgreen'
+        target.style.borderRadius = '15px'
         setTimeout(donnerPoint, 200)
-    } else if (ev.target.id !== '') {
-        ev.target.style.border = '3px solid red'
-        ev.target.style.borderRadius = '15px'
+    } else if (target.id !== '') {
+        target.style.border = '3px solid red'
+        target.style.borderRadius = '15px'
     }
 }
